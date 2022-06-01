@@ -66,7 +66,7 @@ ALTER TABLE `item`
 CREATE TABLE `user` (
   `id` int(11) UNSIGNED NOT NULL,
   `login` varchar(16) NOT NULL,
-  `password` varchar(16) NOT NULL
+  `password` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -74,8 +74,8 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`id`, `login`, `password`) VALUES
-(1, 'Stuff', '123456'),
-(2, 'Doodads', '654321');
+(1, 'Stuff', '$argon2id$v=19$m=16,t=2,p=1$emVmZXpmemZlemVmZWR6ZXplZg$rqZkhxu5YbqCGHPNrjJZpQ'),
+(2, 'Doodads', '$argon2id$v=19$m=16,t=2,p=1$emVmZXpmemZlemVmZWR6ZXplZg$rqZkhxu5YbqCGHPNrjJZpQ');
 
 --
 -- Index pour les tables exportées
